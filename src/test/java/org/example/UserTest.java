@@ -32,16 +32,12 @@ class UserTest {
 
     @Test
     void objectCheckIfEmailsEqualsLoginThrows(){
-
         Assertions.assertThrows(LoginMatchesEmailException.class, () -> new User(UserTestConstants.DEFAULT_LOGIN_AS_MAIL, UserTestConstants.DEFAULT_EMAIL));
-
     }
 
     @Test
     void objectCheckIfIncorrectEmailThrows(){
-
         Assertions.assertThrows(BadEmailException.class, () -> new User(UserTestConstants.DEFAULT_LOGIN, UserTestConstants.INCORRECT_EMAIL));
-
     }
 
     @Test
